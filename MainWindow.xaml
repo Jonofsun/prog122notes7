@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF7F96CE" Offset="1"/>
+                <GradientStop Color="#FF3F4A66" Offset="0.499"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <ListBox x:Name="lbDisplay" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="170,30,325,102" SelectionChanged="lbDisplay_SelectionChanged"/>
+        <TextBox x:Name="txtToAdd" HorizontalAlignment="Left" Margin="17,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblAddToList" Content="Information to add an Item" HorizontalAlignment="Left" Margin="17,234,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAddItem" Content="Add to List" HorizontalAlignment="Left" Margin="17,312,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.212,2.674" Width="120" Click="btnAddItem_Click"/>
+        <Button x:Name="btnDisplayStudent" Content="Display Selected Student " HorizontalAlignment="Left" Margin="526,42,0,0" VerticalAlignment="Top" Width="144" Height="25" Click="btnDisplayStudent_Click"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Margin="557,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Margin="557,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCSIGrade" HorizontalAlignment="Left" Margin="557,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtGenEd" HorizontalAlignment="Left" Margin="557,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="481,96,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.147,0.123" Width="71" Foreground="#FFECE0E0"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="481,131,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.147,0.123" Width="71"/>
+        <Label Content="CSI Grade" HorizontalAlignment="Left" Margin="480,162,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.147,0.123" Width="72"/>
+        <Label Content="GenEd Grade" HorizontalAlignment="Left" Margin="475,193,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.147,0.123" Width="82"/>
+        <Button x:Name="btnAddStudnet" Content="Add Student" HorizontalAlignment="Left" Margin="526,245,0,0" VerticalAlignment="Top" Width="144" Height="34" Click="btnAddStudnet_Click"/>
+        <Button x:Name="btnRemoveStudent" Content="Delete selected" HorizontalAlignment="Left" Margin="31,30,0,0" VerticalAlignment="Top" Height="37" Width="106" Click="btnRemoveStudent_Click"/>
+        <ComboBox x:Name="cbDisplay" HorizontalAlignment="Left" Margin="170,354,0,0" VerticalAlignment="Top" Width="305" SelectionChanged="cbDisplay_SelectionChanged"/>
 
     </Grid>
 </Window>
